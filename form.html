@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+
+    <title>Formulario</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B');
+@import url('https://fonts.googleapis.com/css2?family=Roboto%3Awght%40300&display=swap%27%29%3B');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image:url(https://img.freepik.com/fotos-premium/fondo-papel-abstracto-color-azul_78899-602.jpg?w=2000) ;
+}
+.header{
+    background-color: #52ceec;
+    padding: 3px;
+    text-align: center;
+}
+
+form{
+    margin: 50px auto;
+    background-color: #2E4053;
+    width: 700px;
+    padding: 2.5rem;
+    border:3px solid rgb(255, 0, 170) ;
+    border-radius: 5px ;
+}
+
+.forms-grupos{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 15px;
+    font-family: 'Roboto';
+    font-weight: 900;
+
+}
+input[type="text"]{
+    margin: 5px 0;
+    font-size: 15px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    color: #2E4053;
+}
+input[type="email"]{
+    margin: 5px 0;
+    font-size: 15px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    color: #2E4053;
+}
+
+input[type="number"]{
+    margin: 5px 0;
+    font-size: 15px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    color: #2E4053;
+}
+p{
+    font-size: 15px;
+}
+
+.SelectOp{
+    margin: 5px 0;
+    font-size: 15px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    color: #2E4053;
+}
+
+#comentarios{
+    width: 97%;
+    height: 80px;
+    font-size: 1rem;
+    color: black;
+}
+
+.button{
+    margin-top: 25px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color:#52ceec;
+    color: wheat;
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+input[type="submit"]:hover{
+    background-color: rgb(253, 188, 127);
+    cursor: pointer;
+}
+
+        </style>
+</head>
+<body>
+    <header class="header">
+        <h1> Encuesta</h1>
+    </header>
+            
+    <form action="#" method="post">
+        <div class="forms-grupos">
+            <label><b>Name</b></label>
+            <input type="text" name="name-label" id="nombre" placeholder="Ingrese su Nombre" required>
+        </div>
+        <div class="forms-grupos">
+            <label><b>Email</b></label>
+            <input type="email" name="email-label" id="mail" placeholder="Ingrese su Correo" required>
+        </div>
+
+        <div class="forms-grupos">
+            <label><b>Edad (opcional)</b></label>
+            <input type="number" name="number-label" id="edad" placeholder="Ingresa Tu Edad" required min="11" max="25">
+        </div>
+
+<div class="forms-grupos">
+    <p><b>Que cursas Actualmente</b></p>
+    <label>
+<select name="usuario-option" id="select" class="SelectOp">
+    <option disabled selected value>Selecciona tu nivel de estudio actual</option>
+    <option value="Estudiante">1er año de Secundaria</option>
+    <option value="Estudiante">2do año de Secundaria</option>
+    <option value="Estudiante">3er año de Secundaria</option>
+    <option value="Estudiante">1er año de Preparatoria</option>
+    <option value="Estudiante">2do año de Preparatoria</option>
+    <option value="Estudiante">3er año de Preparatoria</option>
+    <option value="Estudiante">Universidad</option>
+    <option value="Estudiante">No estudio Actualmente</option>
+</select>
+    </label>
+</div>
+
+
+<div class="forms-grupos">
+    <label><b>¿Como te sientes dia a dia?</b></label>
+    
+    <input type="text" name="pregunta-label" id="Pregunta1" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Que haces cuando estas triste?</b></label>
+    
+    <input type="text" name="pregunta-label" id="Pregunta2" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Sueles tener constantemente bajones emocionales?</b></label>
+   
+    <input type="text" name="pregunta-label" id="Pregunta3" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Como alivias el estres?</b></label>
+    
+    <input type="text" name="pregunta-label" id="Pregunta4" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Alguien te ayuda en tus malos momentos?</b></label>
+ 
+    <input type="text" name="pregunta-label" id="Pregunta5" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Que haces para poder sobrellevarlo?</b></label>
+
+    <input type="text" name="pregunta-label" id="Pregunta6" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Aparte de tristeza sientes alguna otra emoción como enojo,desesperación,agobiado,etc?</b></label>
+
+    <input type="text" name="pregunta-label" id="Pregunta7" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Qué pasa cuando no sabes controlar tus emociones?</b></label>
+
+    <input type="text" name="pregunta-label" id="Pregunta8" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Cuál pasatiempo alivia tus malos ratos?</b></label>
+
+    <input type="text" name="pregunta-label" id="Pregunta9" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Que sueles pensar en esos momentos?</b></label>
+
+    <input type="text" name="pregunta-label" id="Pregunta10" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Tu familia como te apoya en estos malos momentos?</b></label>
+
+    <input type="text" name="pregunta-label" id="Pregunta11" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Haz recibido ayuda de algun profesional?</b></label>
+    <input type="text" name="pregunta-label" id="Pregunta12" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <label><b>¿Comó consideras que lo sobrellevas?</b></label>
+ 
+    <input type="text" name="pregunta-label" id="Pregunta13" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+
+    <input type="text" name="pregunta-label" id="Pregunta14" placeholder="Ingresa tu respuesta" required>
+</div>
+<br>
+<div class="forms-grupos">
+    <label><b>¿Cuál es tu lugar en donde te sientes seguro y protegido?</b></label>
+
+    <input type="text" name="pregunta-label" id="Pregunta15" placeholder="Ingresa tu respuesta" required>
+</div>
+
+<div class="forms-grupos">
+    <p><b>Escribenos tus comentarios</b></p>
+    <label >
+        <input type="text" name="comment" id="comentarios" placeholder="Escribe tus comentarios...">
+    </label>
+</div>
+
+<div class="button">
+    <input type="submit" value="Enviar">
+</div>
+    </form>
+</body>
+</html>
