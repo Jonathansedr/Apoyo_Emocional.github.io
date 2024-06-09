@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apoyo Emocional</title>
+<style>
+ @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  animation: fadeIn 7s ease-out;
+}
+
+.header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+.main {
+  margin: 15px;
+}
+
+.section {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  bottom: 0;
+  width: 100%;
+}
+
+button, input[type="submit"] {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1em;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #45a049;
+  animation: pulse 1s infinite;
+}
+
+.success-message {
+  color: green;
+  text-align: center;
+  display: none;
+}
+
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+img, video {
+  max-width: 45%;
+  height: auto;
+  border-radius: 8px;
+}
+
+h3, a, li, ul, nav {
+  text-align: center;
+}
+a{
+cursor: pointer;
+text-align: center;
+}
+
+
+#back-to-index {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #96bae4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  z-index: 100000000;
+}
+
+.show-back-to-index {
+  display: block;
+}
+
+
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>¡Bienvenidos al Centro de Apoyo Emocional!</h1>
+    <p>Este es tu rinconcito de confianza para hablar de lo que sientes.</p>
+  </div>
+
+
+<div class="main">
+  <div class="section">
+    <h3>INDICE</h3>
+    <nav>
+      <ul>
+          <li><a href="#salud">SALUD MENTAL</a></li><br>
+          <li><a href="#relaciones">RELACIONES</a></li><br>
+          <li><a href="#educacion">EDUCACION</a></li><br>
+          <li><a href="#encuesta">ENCUESTA</a></li><br>
+          <li><a href="#foro">FORO</a></li><br>
+          <li><a href="#juego">JUEGO</a></li><br>
+          <li><a href="#con">CONTACTO</a></li>
+
+          </ul>
+</nav>
+  </div>
+
+
+<!-- Contenido sobre salud mental -->
+<section id="salud">
+<div class="section">
+  <h2>Salud Mental</h2>
+    <p>Descubre cómo cuidar de tu mente tanto como de tu cuerpo.</p>
+    <div class="media-container">
+    <img src="saludmental.jpg" alt="Imagen sobre Educación">
+    <video controls>
+      <source src="Hablemos de Salud Mental.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+</div>
+  <article>
+    <h3>¿Qué es la Salud Mental?</h3>
+    <p>La salud mental incluye nuestro bienestar emocional, psicológico y social. Afecta cómo pensamos, sentimos y actuamos al enfrentar la vida. También determina cómo manejamos el estrés, nos relacionamos con los demás y tomamos decisiones.</p>
+    <h3>Consejos para Mantener una Buena Salud Mental</h3>
+    <ul>
+      <li>Mantén una rutina regular.</li>
+      <li>Realiza ejercicio físico con regularidad.</li>
+      <li>Aliméntate de manera saludable.</li>
+      <li>Duerme lo suficiente.</li>
+      <li>Practica técnicas de relajación.</li>
+      <li>Establece conexiones sociales.</li>
+    </ul>
+    <a href="https://www.terapify.com/blog/salud-mental-que-es-prevencion-importancia/">PARA MAS INFORMACIÓN</a>
+  </article>
+
+</div>
+</section>
+<br><br>
+<!-- Contenido sobre relaciones -->
+<section id="relaciones">
+<div class="section">
+  <h2>Relaciones</h2>
+  <p>Consejos y soporte para construir relaciones saludables.</p>
+  <div class="media-container">
+    <img src="relaciones.jpg" alt="Imagen sobre Educación">
+    <video controls>
+      <source src="Como Mejorar mis Relaciones Interpersonales - 5 Claves.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+</div>
+  <article>
+    <h3>Construyendo Relaciones Saludables</h3>
+    <p>Las relaciones saludables se basan en la confianza, el respeto mutuo y la comunicación efectiva. Aquí hay algunos consejos para fortalecer tus relaciones:</p>
+    <ul>
+      <li>Comunica tus sentimientos de manera abierta y honesta.</li>
+      <li>Escucha activamente y muestra empatía.</li>
+      <li>Respeta los límites personales.</li>
+      <li>Apoya a tus seres queridos en tiempos difíciles.</li>
+    </ul>
+  </article>
+  <a href="https://psicologiaymente.com/social/como-construir-relaciones-sanas">PARA MAS INFORMACIÓN</a>
+</div>
+</section>
+<br><br>
+<!-- Contenido sobre educación -->
+<section id="educacion">
+<div class="section">
+  <h2>Educación</h2>
+  <p>Herramientas y técnicas para un aprendizaje efectivo.</p>
+  <div class="media-container">
+    <img src="educacion.jpg" alt="Imagen sobre Educación">
+    <video controls>
+      <source src="Las emociones son las guardianas del aprendizaje . Begoña Ibarrola, psicóloga y escritora.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+  <article>
+    <h3>Estrategias de Aprendizaje</h3>
+    <p>El aprendizaje efectivo requiere estrategias que se adapten a tu estilo personal. Aquí hay algunas técnicas que pueden ayudarte:</p>
+    <ul>
+      <li>Utiliza mapas mentales para organizar la información.</li>
+      <li>Establece objetivos de estudio claros y alcanzables.</li>
+      <li>Practica la enseñanza de lo aprendido a otros.</li>
+      <li>Realiza pausas activas durante tus sesiones de estudio.</li>
+    </ul>
+  </article>
+  </div>
+  <a href="https://psicologiaendigital.com/psicologia-educativa/la-educacion-emocional-su-importancia-en-el-proceso-de-aprendizaje/">PARA MAS INFORMACIÓN</a>
+</div>
+</section>
+<br><br>
+<!-- Formulario de encuesta -->
+<section id="encuesta">
+<div class="section">
+
+
+  <h2>Encuesta de Satisfacción</h2>
+  <p>Tu opinión es importante para nosotros. ¡Participa en nuestra encuesta!</p>
+  <form onsubmit="showSuccessMessage(event)">
+    <label for="satisfaction">¿Qué tan satisfecho estás con nuestros servicios?</label>
+    <div class="slider-value" id="sliderValue">3</div> <!-- Valor inicial del rango -->
+    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="3" oninput="updateSliderValue(this.value)">
+    <input type="submit" value="Enviar">
+  </form>
+  <div class="success-message" id="successMessage">
+    <p>¡Enviado con éxito!</p>
+  </div>
+</div>
+</section>
+<br><br>
+<!-- Enlace al foro de discusión -->
+<section id="foro">
+<div class="section">
+  <h2>Foro de Discusión</h2>
+  <p>Comparte tus experiencias y recibe apoyo de la comunidad.</p>
+  <a href="/foro-discusion">Visita nuestro foro de discusión</a>
+</div>
+</section>
+<br><br>
+<section id="juego">
+  <div class="section">
+    <h2>JUEGOS</h2>
+<a href="Biblioteca de Juegos.html">VEN A DIVERTIRTE TANTITO JUGANDO</a>
+</div>
+</section>
+
+<section id="con">
+<div class="footer">
+  <h2>CONTACTO</h2>
+  <h2>studystars@gmail.com</h2>
+</div>
+</section>
+
+<form action="mailto:studystars@gmail.com">                
+<button>Enviar Mensaje</button>
+</form>
+
+</div>
+<script>
+  // Función para actualizar y mostrar el valor del rango
+  function updateSliderValue(value) {
+    document.getElementById('sliderValue').textContent = value;
+  }
+
+  // Función para mostrar mensaje de éxito en la página
+  function showSuccessMessage(event) {
+    event.preventDefault(); // Previene el comportamiento por defecto del formulario
+    var successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block'; // Muestra el mensaje de éxito
+    // Aquí puedes agregar más lógica si necesitas enviar los datos a un servidor
+  }
+
+</script>
+
+</body>
+</html>
