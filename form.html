@@ -16,14 +16,15 @@
     from { opacity: 0; }
     to { opacity: 1; }
   }
-
+body.animate {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
 
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    animation-name: fadeIn;
-    animation-duration: 2s;
     background-image:url(https://img.freepik.com/fotos-premium/fondo-papel-abstracto-color-azul_78899-602.jpg?w=2000) ;
 }
 .header{
@@ -231,12 +232,6 @@ input[type="submit"]:hover{
  
     <input type="text" name="pregunta-label" id="Pregunta13" placeholder="Ingresa tu respuesta" required>
 </div>
-
-<div class="forms-grupos">
-
-    <input type="text" name="pregunta-label" id="Pregunta14" placeholder="Ingresa tu respuesta" required>
-</div>
-<br>
 <div class="forms-grupos">
     <label><b>¿Cuál es tu lugar en donde te sientes seguro y protegido?</b></label>
 
