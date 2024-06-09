@@ -8,6 +8,11 @@
 
     <title>Formulario</title>
     <style>
+        @keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+        }
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B');
 @import url('https://fonts.googleapis.com/css2?family=Roboto%3Awght%40300&display=swap%27%29%3B');
 
@@ -98,6 +103,7 @@ p{
 
 .button{
     margin-top: 25px;
+    anímate:pulse infinite;
 }
 
 input[type="submit"]{
