@@ -11,11 +11,23 @@
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B');
 @import url('https://fonts.googleapis.com/css2?family=Roboto%3Awght%40300&display=swap%27%29%3B');
 
+* Definir la animación de fade-in */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
+  /* Aplicar la animación cuando la clase 'animate' se añade al cuerpo */
+  body.animate {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+  }
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    animation-name: fadeIn;
+    animation-duration: 2s;
     background-image:url(https://img.freepik.com/fotos-premium/fondo-papel-abstracto-color-azul_78899-602.jpg?w=2000) ;
 }
 .header{
@@ -246,5 +258,76 @@ input[type="submit"]:hover{
     <input type="submit" value="Enviar">
 </div>
     </form>
+    <script>
+  // Esperar a que el DOM se cargue completamente
+  document.addEventListener('DOMContentLoaded', function () {
+    // Obtener el formulario y el botón de envío
+    var form = document.querySelector('form');
+    var button = document.querySelector('input[type="submit"]');
+
+    // Función para mostrar la notificación
+    function showNotification() {
+      // Crear el elemento de notificación
+      var notification = document.createElement('div');
+      notification.textContent = 'Enviado con éxito';
+      notification.style.position = 'fixed';
+      notification.style.top = '20px';
+      notification.style.right = '20px';
+      notification.style.backgroundColor = 'limegreen';
+      notification.style.color = 'white';
+      notification.style.padding = '10px';
+      notification.style.borderRadius = '5px';
+      notification.style.boxShadow = '0 2px 4px rgba(0,0,0,0.2)';
+      notification.style.zIndex = '1000';
+      notification.style.transition = 'opacity 0.5s';
+
+      // Añadir la notificación al cuerpo del documento
+      document.body.appendChild(notification);
+
+      // Establecer la opacidad inicial a 0 y cambiarla a 1 para animar
+      notification.style.opacity = '0';
+      setTimeout(function () {
+        notification.style.opacity = '1';
+      }, 10);
+
+      // Eliminar la notificación después de 3 segundos
+      setTimeout(function () {
+        notification.style.opacity = '0';
+        setTimeout(function () {
+          document.body.removeChild(notification);
+        }, 500);
+      }, 3000);
+    }
+
+    // Función para reiniciar el formulario
+    function resetForm() {
+      form.reset();
+    }
+
+    // Agregar un detector de eventos al botón de envío
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevenir el comportamiento predeterminado del botón de envío
+      showNotification(); // Mostrar la notificación
+      resetForm(); // Reiniciar el formulario
+    });
+  });
+
+        // Esperar a que el DOM se cargue completamente
+  document.addEventListener('DOMContentLoaded', function () {
+    // Obtener todos los campos de entrada del formulario
+    var inputs = document.querySelectorAll('input, select');
+
+    // Función para agregar la clase de animación
+    function addAnimation() {
+      document.body.classList.add('animate');
+    }
+
+    // Agregar la clase de animación cuando cualquier campo reciba el enfoque
+    inputs.forEach(function (input) {
+      input.addEventListener('focus', addAnimation);
+    });
+  });
+      </script>
+    
 </body>
 </html>
