@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Menú</title>
+    <style>
+
+        *{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+	}
+	body{
+		background: url(img.jpg);
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 80px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: 90%;
+		max-width: 1350px;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:70px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 70px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	/*Fin de Menù lateral*/
+
+    </style>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div class="logo">
+				<h1>Menú</h1>
+			</div>
+			
+		</div>
+	</header>
+	<div class="capa"></div>
+
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+			<a href="https://view.genially.com/6668ddf1f9b5c40014587d7a/interactive-content-juego-dobles-emociones">Juegos de Dobles emociones</a>
+			<a href="https://view.genially.com/6667866066d78a00159a5c5a/interactive-content-relaciona-las-emociones">Relacionar las Emociones</a>
+			<a href="https://view.genially.com/666a882fb9dac50014074449/interactive-image-galeria-de-arte-sobre-emociones">Galeria de Arte</a>
+			<a href="https://view.genially.com/666a45f7703e7a00141282ac/interactive-content-infografia-sobre-el-estres">Infografia sobre el Estres</a>
+            <a href="https://view.genially.com/66613c87572bf00013d1fb6f/interactive-content-ordena-las-oraciones-de-una-emocion">Ordena las oraciones de una emocion</a>
+            <a href="https://view.genially.com/666116332657cb0015969f73/interactive-content-genially-sin-titulo">El secreto de la Felicidad</a>
+            <a href="https://view.genially.com/6669b9d45439f00014ba06ce/interactive-content-descubre-al-personaje">Descubre el Personaje</a>
+            <a href="https://view.genially.com/66635c05b39387001414768b/interactive-content-encuentra-la-pareja">Encuentra la Pareja</a>
+            <a href="https://view.genially.com/665f56b68129ba001499e52b/interactive-content-quiz-emociones">Quiz de emociones</a>
+            <a href="https://view.genially.com/6667231fe8dd4a0015285344/interactive-content-quiz-millonario">Quiz Millonario</a>
+			
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+
+</body>
+</html>
